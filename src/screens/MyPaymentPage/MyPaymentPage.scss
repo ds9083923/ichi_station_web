@@ -1,0 +1,31 @@
+.paymentPage-component {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    .paymentPage-container {
+        .paymentPage-content {
+            padding: 50px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .paymentPage-component {
+        .paymentPage-container {
+            max-width: 80% !important;
+
+            .item-content {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .paymentPage-component {
+        .paymentPage-container {
+
+        }
+    }
+}

@@ -1,0 +1,293 @@
+@import '../../../theme.scss';
+
+.startArea-component {
+    display: flex;
+    flex-direction: column;
+    background: no-repeat url('../../../assets/images/HomePage/start-area-bg.png');
+    background-position: center;
+    background-size: cover;
+    margin-top: 70px;
+
+    .startArea-container {
+        h2{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 55px;
+            color: #FFFFFF;
+        }
+
+        h5{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #FF8C91;
+        }
+
+        .restaurant-name, .type-name {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            color: $main-color;
+        }
+        .restaurant-street {
+            font-family: Nunito;
+            font-style: normal;
+            font-size: 15px;  
+            color: $main-color;
+        }
+
+        .main-row {
+            margin: auto;
+            margin-top: 200px;
+
+            .main-body {
+                margin-top: 65px;
+                select,input{
+                    outline: none;
+                }
+
+                .left-area {
+                    padding:15px;
+                    
+                    .left-area-container {
+                        height: 90px;
+                        background-color: #FFF;
+                        border-radius: 5px;
+                        padding:20px;
+
+                        .type-menu-area {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-top: 13px;
+                        }
+
+                        select {
+                            margin-left:-5px;
+                            margin-top: -5px;
+                            padding-left:0px;
+                            font-family: Nunito;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 20px;
+                            -webkit-appearance:none;
+                            color: #3C5896;
+                            border: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            background: transparent;
+                            background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(60, 88, 150)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+                            background-repeat: no-repeat;
+                            background-position-x: 100%;
+                            background-position-y: 7px; 
+                            border-radius: 2px;
+                            padding-left:3px;
+                        }
+                    }
+
+                    .type-drop-down-list{
+                        background-color: #FFF;
+                        // box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+                        border-radius: 5px;
+
+                        .type-item {
+                            border-top: solid 1px $gray5;
+                            padding: 10px 15px;
+                            cursor: pointer;
+                            
+                            &:hover {
+                                background-color: $gray6;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+    
+                .right-area {
+                    padding:15px;
+    
+                    .right-area-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 90px;
+                        background-color: #FFF;
+                        border-radius: 5px;
+                        padding:20px;
+
+                        .input-area {
+                            width: 100%;        
+                        }
+
+                        .location-icon {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;                            
+                            padding: 13px;
+                            border-right: solid 1px $gray5;
+                            cursor: pointer;
+                        }
+
+                        .serch-icon {
+                            cursor: pointer;
+                        }
+                        
+                        .select-restaurant {
+                            display: flex;
+                            align-items: center;
+                            padding: 7px 0px 19px;
+                            height: 50px;                      
+                        }
+
+                        select {
+                            margin-left:-5px;
+                            margin-top: -5px;
+                            padding-left:0px;
+                            font-family: Nunito;
+                            font-style: normal;
+                            font-weight: bold;
+                        
+                            -webkit-appearance:none;
+                            color: #3C5896;
+                            border: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            background: transparent;
+                            background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(60, 88, 150)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+                            background-repeat: no-repeat;
+                            background-position-x: 100%;
+                            background-position-y: 7px; 
+                            border-radius: 2px;
+                            padding-left:3px; 
+                            width:100%;
+                               
+                        }
+
+                        input{ 
+                            width:100%;
+                            display: inline;
+                            padding:0px;
+                            min-width: calc(99%);
+                            box-shadow: none;
+                            background-color: white;
+                            border: solid 1px white;
+                            font-family: Nunito;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 20px;
+                            color: $main-color;
+                            &::placeholder {
+                                color: $main-color;
+                            }
+
+                        }
+
+                        .autocomplete-dropdown-container {
+                            left: 15px;
+                            right: 15px;
+                            top: 103px;
+                            border-top: none;
+                            
+                            .suggestion-item {
+                                border-bottom: solid 1px $gray5;
+                                padding: 15px 20px;
+                                cursor: pointer;
+                            }
+
+                            .suggestion-item--active {
+                                border-bottom: solid 1px $gray5;
+                                background-color: $gray6;
+                                padding: 15px 20px;
+                                cursor: pointer;
+                            }
+                        }
+
+
+                        .civico-input {
+                            min-width: 50px
+                        }
+                    }
+
+                    .drop-down-list {
+                        background-color: #FFF;
+                        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+                        border-radius: 5px;
+                        z-index: 1;
+                        position: relative;
+
+                        .list-item {
+                            display: flex;
+                            align-items: center;
+                            border-top: solid 1px $gray5;
+                            padding: 15px 20px;
+                            cursor: pointer;
+                            
+                            &:hover {
+                                background-color: $gray6;
+                            }
+                            .level-icon {
+                                width: 20px;
+                                margin-right: 10px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .startArea-component {
+        .startArea-container {
+            height: 70vh;
+            min-height: 600px;
+            padding: 20px;
+
+            .main-row {
+                max-width: 850px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .startArea-component {
+        .startArea-container {
+            height: 70vh;
+            min-height: 600px;
+            padding: 20px;
+
+            .main-row {
+                max-width: 850px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .startArea-component {
+        .startArea-container {
+            height: 90vh;
+            min-height: 600px;
+            .main-row {
+                .select-restaurant {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

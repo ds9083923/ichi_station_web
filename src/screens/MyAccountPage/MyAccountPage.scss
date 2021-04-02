@@ -1,0 +1,31 @@
+.accountPage-component {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    .accountPage-container {
+        .accountPage-content {
+            padding: 50px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .accountPage-component {
+        .accountPage-container {
+            max-width: 80% !important;
+
+            .item-content {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .accountPage-component {
+        .accountPage-container {
+
+        }
+    }
+}

@@ -1,0 +1,271 @@
+.stepbar{
+    .cart.addon{
+        .order-line{
+            border-top: 1px dotted lightgray; 
+            height: auto;
+    
+            display:flex;
+            justify-content: flex-start;
+            *{
+                margin-top:auto;
+                margin-bottom: auto;                
+            }
+            .description{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: baseline;
+                /* margin: 0px; */
+                margin-top: 5px;
+                margin-bottom: 5px;
+                color: #3C5896;
+                white-space: pre;
+                margin-left:5px;
+                font-size: 15px;
+            }
+            .price {
+                text-align: center;
+                white-space: pre;
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: #FF8C91;
+            }
+            .number-prod{ 
+                width: 54px;
+                text-align: center;
+                margin: 10px;
+            }
+            img{
+                        height:auto;
+                width: auto; 
+                object-fit: inherit;
+            }
+            .remove{
+                cursor: pointer;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    }
+    
+
+    .cart {         
+        z-index: 2;  
+        right: unset;
+        background: #FBFBFB;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        bottom: 0;
+        margin: auto;        
+        width: unset; 
+        .cart-delivery-takeaway{
+            
+        }
+        .totals {
+            position: initial;  
+            /* bottom: 100px; */
+              width: unset;  
+              
+        }
+        .border-up{
+            border-top:1px dotted #ccc;
+            
+            height: 50px;
+            display: flex;
+            line-height: 45px;
+            justify-content: center;
+            div.gray {
+                font-size:14px;
+                color:gray;
+            }
+        }
+
+        h5 {display:inline;}
+        
+        .delivery-takeaway .col{
+            display: inline;
+        }
+        .tot {
+            font-family: "Nunito";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;    
+            /* identical to box height, or 160% */
+            letter-spacing: normal;
+            line-height: 40px;
+            text-transform: none;
+            /* Blu */
+            display:inline;
+            color: #3C5896;
+        }
+    }
+
+    span{
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 24px;
+        /* identical to box height, or 200% */
+         
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        
+        /* Blu */ 
+    }
+    .container {
+        width: 100%;
+        padding: 16px 0;
+    }
+      
+    .progressbar {
+        counter-reset: step;
+        margin-left: 20px;
+    }
+    .progressbar li {
+        list-style: none;
+        display: inline-block;
+        width: 30%;
+        margin-right:20px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        padding-right:0px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold; 
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 28px;
+        border: 1px solid #ddd;
+        border-radius: 100%;
+        display: block;
+        text-align: center;
+        margin: 0 auto 10px auto;
+        background-color: #fff;
+    }
+    .progressbar li:after {
+        content: "";
+        position: absolute;
+        width: calc( 100% - 25px);
+        height: 1px;
+        background-color: #ddd;
+        top: 15px;
+        left: -50%;
+        
+    }
+    .progressbar li:first-child:after {
+        content: none;
+    }
+    .progressbar li.active {
+        color: white;
+        
+    }
+    .progressbar li.active span{
+        color: #3C5896;
+        
+    }
+    .progressbar li.active:before {
+        border-color: #3C5896;
+        background-color:#3C5896;
+    } 
+    .progressbar li.active + li.active:after {
+        background-color: #3C5896;
+         
+    }
+}
+.stepbar{
+    height: fit-content;
+    width: 100%;
+    .progressbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+    .cart{
+        display: flex;
+     
+        display: block;
+        width: 100%;
+        position: unset;
+        min-width: unset;
+    }
+}
+.delivery-takeaway{
+    .row{
+        width: 100%;
+        min-width: unset;
+    }
+}
+.cart-addon{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    &__group{
+        display: flex;
+        flex-direction: column;
+    }
+    .totals{
+        font-family: "Nunito";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    color: #3C5896;
+    }
+    .group-title{
+        margin-bottom: 24px!important;
+    }
+    .group-container{
+        border-top: 1px dashed #BDBDBD;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+    padding: 0 16px;
+}
+@media(max-width:1200px){
+    .cart{
+        max-width: 1140px;
+    }
+}
+@media(max-width:992px){
+    .cart{
+        max-width: 960px;
+    }
+}
+@media(max-width:768px){
+    .group-container{
+        
+        justify-content: center!important;
+    }
+    .cart{
+        max-width: 720px;
+    }
+}

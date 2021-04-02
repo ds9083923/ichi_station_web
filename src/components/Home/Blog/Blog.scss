@@ -1,0 +1,102 @@
+@import '../../../theme.scss';
+
+.blog-component {
+    display: flex;
+    flex-direction: column;
+
+    .blog-container {
+
+        h2 {
+            color: $primary-text;
+            font-weight: bold;
+            font-family: Nunito;
+        }
+
+        .blog-header {
+            .level-icon {
+                margin-bottom: 15px;
+            }
+        }
+
+        .main-row {
+
+            .blog-item {
+                box-shadow: 0px 9px 45px rgba(0, 0, 0, 0.08);
+                border-radius: 5px;
+
+                .blog-img-container {
+                    .blog-img {
+                        width: 100%;
+                    }
+                }
+
+                .blog-description-container {
+                    padding: 20px;
+
+                    .date {
+                        color: $pink;
+                        font-size: 12px;
+                        font-family: 'Open Sans';
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+
+                    .title {
+                        color: $main-color;
+                        font-size: 15px;
+                        font-family: Nunito;
+                        font-weight: bold;
+                    }
+
+                    .description {
+                        color: gray;
+                        font-size: 15px;
+                        font-family: Nunito;
+                        padding: 15px 0 25px;
+                    }
+
+                    .subscribe-btn {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .blog-component {
+        padding: 70px 0;
+
+        .blog-container {
+            max-width: 80% !important;
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            
+        }
+        
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .blog-component {
+        padding: 30px 0;
+        
+        .blog-container {
+            h2 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            } 
+
+            .main-row {
+
+                .blog-item {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

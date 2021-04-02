@@ -1,0 +1,63 @@
+.modale{
+
+    .restaurants{
+        min-width: calc(100vw - 100px);
+        overflow-x: auto;
+        display: flex;
+
+    }
+    .restaurants > div{
+        margin:10px;
+    }
+    .restaurants > div  img{
+        height: 200px;
+        object-fit: cover;
+    }
+}
+.restaurant {
+    text-align: center;
+
+    .restaurant-scheda{
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+        border-radius: 16px;
+        padding:15px;
+        display: inline-block;
+        margin-top: -200px;
+        background: white;
+        border:1px solid white;
+        width: calc(100vw - 400px); 
+        text-align: left;
+
+        .tableHours{
+            color:#828282;
+            padding:25px;
+
+            .row{
+                border-bottom:1px dotted #bdbdbd;
+                min-height: 50px;
+                .col{display: flex;justify-content: center;align-items: center;}
+                .col:last-child{
+                    border-left:1px dotted  #bdbdbd;
+
+                }
+            }
+
+        }
+        button{
+            max-width: 300px;
+        }
+        h3{ 
+            button{
+            float: right;
+            max-width: 200px;
+            }
+        }        
+    }
+    
+    img{
+        width: calc(100vw - 200px);
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+    }
+}

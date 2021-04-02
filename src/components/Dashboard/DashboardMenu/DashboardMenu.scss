@@ -1,0 +1,92 @@
+@import '../../../theme.scss';
+
+.dashboardMenu-component {
+    display: flex;
+    flex-direction: column;
+
+    .dashboardMenu-container {
+        
+        p { 
+            font-size: 12px;           
+            font-weight: bold;
+            font-family: Open Sans;
+            margin-bottom: 0;
+            letter-spacing: 2px;
+        }
+
+        
+        
+        .main-menu {
+            .menu-item {
+                height: 60px;
+                border-top: dotted 0.5px $gray4;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .active-menu {
+                color: $main-color;
+            }
+    
+            .inActive-menu {
+                color: $gray4;
+            }
+        }
+
+        .others-menu {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .dashboardMenu-component {
+        padding: 70px 0;
+
+        .dashboardMenu-container {
+            padding-right: 40%;
+
+            .link {
+                font-size: 15px;           
+                font-family: Nunito;
+                color: $gray4;
+                display: block;
+                padding: 10px 0px;
+            }
+
+            .main-menu {
+                .menu-item {
+                    &:last-child {
+                        border-bottom: dotted 0.5px $gray4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .dashboardMenu-component {
+        
+        .dashboardMenu-container {
+            
+            .main-menu {
+                display: flex;
+                align-items: center;   
+                justify-content: space-between;
+
+                .menu-item {
+                    border: none;                 
+                }
+            }
+
+            .others-menu {
+                display: flex;
+                align-items: center;   
+                justify-content: space-between;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

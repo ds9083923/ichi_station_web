@@ -1,0 +1,45 @@
+@import '../../../theme.scss';
+
+.dashboard-header-component {
+    display: flex;
+    flex-direction: column;
+
+    .dashboard-header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 0 0;
+        
+        h3 {
+            font-size: 20px;
+            color: $main-color;
+            font-family: Nunito;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 15px;
+            color: $gray3;
+            font-family: Nunito
+        }
+
+        .logout-btn {
+            width: 160px;
+            height: 56px;
+            border-radius: 5px;
+            background-color: $main-color;
+            color: #FFF;
+            font-size: 12px;
+            font-family: Open Sans;
+            letter-spacing: 0.2em;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .dashboard-header-component {
+        .row {
+            margin: 0;
+        }
+    }
+}

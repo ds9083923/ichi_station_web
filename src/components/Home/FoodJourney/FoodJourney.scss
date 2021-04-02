@@ -1,0 +1,84 @@
+@import '../../../theme.scss';
+
+.foodJourney-component {
+    display: flex;
+    flex-direction: column;
+
+    .foodJourney-container {
+
+        h2 {
+            color: $primary-text;
+            font-weight: bold;
+            font-family: Nunito;
+        }
+
+        p {
+            color: gray;
+            font-family: Nunito;
+        }
+
+        .journey-header {
+            .level-icon {
+                margin-bottom: 15px;
+            }
+        }
+
+        .left-area {
+            padding: 10px 15px ;
+            .journey-img {
+                width: 100%;
+                margin: 15px 0px 15px;
+            }
+        }
+
+        .right-area {
+            .journey-img {
+                width: 100%;
+                margin: 15px 0px 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .foodJourney-component {
+        padding: 230px 0 200px;
+
+        .foodJourney-container {
+            max-width: 70% !important;
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }   
+
+            p {
+                font-size: 15px;
+            }
+
+            .journey-header {
+                p{
+                    max-width: 440px;
+                }
+            }
+
+            .right-area {
+                padding: 80px 15px ;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .foodJourney-component {
+        padding: 30px 0;
+        
+        .foodJourney-container {
+            h2 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            } 
+        }
+    }
+}

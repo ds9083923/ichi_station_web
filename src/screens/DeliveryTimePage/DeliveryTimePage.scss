@@ -1,0 +1,118 @@
+@import '../../theme.scss';
+
+.deliveryTime-component {    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    overflow-y: scroll;
+    
+    .deliveryTime-container{
+        max-height: calc(100vh - 80px);
+        height: fit-content;
+
+        h2{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: $main-color;
+            margin-bottom: 50px;
+        }
+
+        .selected-time {
+            text-align: center;
+            font-family: Nunito;
+            font-style: normal;
+            font-size: 15px;
+            color: $gray3;
+            margin-bottom: 20px;
+        }
+
+        .time-container{
+            border-top: dotted 0.5px $gray4;
+            border-bottom: dotted 0.5px $gray4;           
+
+            .item-container{
+                
+                .category-txt {
+                    letter-spacing: normal;
+                    font-family: Nunito;
+                    font-style: normal;
+                    font-weight: bold;
+                    text-transform: none;
+                    font-size: 15px;
+                    line-height: 24px;
+                    color: $main-color;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+
+                .list-area {
+                    border-top: dotted 0.5px $gray4;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px 0;
+
+                    .item {                        
+                        border-radius: 5px;                        
+                        font-family: Nunito;
+                        font-size: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 140px;
+                        height: 40px;
+                        margin: 10px 0;
+                        cursor: pointer;
+                    }
+                    
+                    .active {
+                        color: $main-color;
+                        border: solid 1px $main-color;
+                    }
+
+                    .inActive {
+                        color: $gray3;
+                        border: solid 1px $gray4;
+                    }
+                }
+            }
+        }
+
+        .confirm-btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 50px;
+            .confirm-btn {
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .deliveryTime-component {
+        .deliveryTime-container {
+            width: 70%;
+
+        } 
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .deliveryTime-component {
+        .deliveryTime-container {
+            
+        }
+    }
+}

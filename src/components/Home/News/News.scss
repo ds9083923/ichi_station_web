@@ -1,0 +1,157 @@
+@import '../../../theme.scss';
+
+.news-component {
+    display: flex;
+    flex-direction: column;
+
+    .news-container {
+
+        h2 {
+            color: $primary-text;
+            font-weight: bold;
+            font-family: Nunito;
+        }
+
+        .news-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+           
+        }
+        .slick-dots{
+            bottom:-40px  !important;
+        }
+        .main-row {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+ 
+            .slick-dots li.slick-active button:before {
+                opacity: 1;
+                color: $main-color;
+            }
+
+            .news-item {
+                display: flex !important;
+                box-shadow: 0px 9px 45px rgba(0, 0, 0, 0.08);
+                border-radius: 5px;
+                background-color: #FFF;
+                margin-right: 0;
+                margin-left: 0;
+
+                .left-area {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    padding: 30px;
+
+                    .title {
+                        font-size: 32px;
+                        color: $main-color;
+                        font-weight: bold;
+                        font-family: Nunito;
+                    }
+
+                    .way {
+                        font-size: 12px;
+                        color: $pink;
+                        font-weight: bold;
+                        font-family: 'Open Sans';
+                    }
+
+                    .price {
+                        font-size: 64px;
+                        color: $main-color;
+                        font-family: Nunito;
+                        margin-top: 20px;
+                    }
+
+                    .order-btn {
+                        width: 160px;
+                        height: 56px;
+                        background-color: $main-color;
+                        border-radius: 5px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        letter-spacing: 0.2em;
+                        color: #FFF;
+                        display: flex;                    
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 60px;
+                        cursor: pointer;
+                    }
+                }
+
+                .right-area {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    background-color: $pink;
+                }
+            }
+
+            .slider-control {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                .previous-icon {
+                    cursor: pointer;
+                }
+
+                .next-icon {
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .news-component {
+        padding: 200px 0 222px;
+        .news-container {
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 0px;
+            }
+
+            .main-row {
+                max-width: 60%;
+
+                .slider-control {
+                    position: absolute;
+                    z-index: 2;
+                    left: -135px;
+                    top: 50%;
+                    transform: translate(0%, -50%);
+                    right: -135px;
+                   
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .news-component {
+        padding: 50px 0;
+        
+        .news-container {
+            h2 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            .main-row {
+                .slider-control {
+                    margin: 30px 15px;
+                }
+            }
+        }
+    }
+}

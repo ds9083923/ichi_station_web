@@ -1,0 +1,31 @@
+.ordersPage-component {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    .ordersPage-container {
+        .ordersPage-content {
+            padding: 50px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .ordersPage-component {
+        .ordersPage-container {
+            max-width: 80% !important;
+
+            .item-content {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .ordersPage-component {
+        .ordersPage-container {
+
+        }
+    }
+}

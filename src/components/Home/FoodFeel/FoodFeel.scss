@@ -1,0 +1,43 @@
+@import '../../../theme.scss';
+
+.foodFeel-component {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+
+    background: no-repeat url('../../../assets/images/HomePage/foodFeel-bg.png');
+    background-position: center;
+    background-size: 100% 100%;
+
+    .foodFeel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Nunito;
+        font-weight: bold;
+        
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .foodFeel-component {
+        .foodFeel-container {
+            font-size: 32px;
+            line-height: 32px;
+            min-height: 640px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .foodFeel-component {
+        
+        .foodFeel-container {
+            font-size: 24px;
+            line-height: 24px;
+            height: 50vh;
+        }
+    }
+}

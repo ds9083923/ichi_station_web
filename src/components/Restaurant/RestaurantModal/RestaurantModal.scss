@@ -1,0 +1,82 @@
+@import '../../../theme.scss';
+
+@keyframes restaurantModalShow {
+    0% {  transform: translatey(-15%); }
+    100% { transform: translatey(0%); }
+}
+
+@keyframes restaurantModalHide {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(0); }
+}
+
+.restaurant-modal-component {
+    animation: restaurantModalShow 0.8s ease-out;
+   
+    .modal-dialog {
+        max-width: 100%;
+        margin-top: 95px;
+    }
+    
+    .restaurant-moal-container {
+        background-color: #FFF;
+        padding: 30px 16px 50px;
+        
+        .item {
+            padding: 20px;
+            cursor: pointer;
+            .item-content {
+                background-color: #FFF;
+                border-radius: 15px;
+
+                .item-img {
+                    height: 230px;
+                    width: 100%;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                }
+
+                .description-content {
+                    padding: 20px;
+
+                    .name-area {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .name {
+                            font-size: 15px;
+                            font-weight: bold;
+                            font-family: Nunito;
+                            font-style: normal;
+                            color: $main-color;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .location {
+                        margin-top: 15px;
+                        font-size: 15px;
+                        font-family: Nunito;
+                        font-style: normal;
+                        color: $gray3;
+                    }
+                }
+            }
+            
+            .active {
+                box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+            }
+
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    
+}
+
+@media screen and (max-width: 991px) {
+    
+}

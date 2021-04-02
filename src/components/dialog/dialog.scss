@@ -1,0 +1,115 @@
+body.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
+.dialog{
+    
+    .link{
+        display: none;
+    }
+    .isDialog{
+        display: inline;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+.dialog-content{
+    height: calc(100vh - 80px);
+    position:fixed;
+    top:90px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index: 5;
+    margin: 0px;
+    background-color: white;
+    display: flex;
+    .content{
+        max-height: calc(100vh - 104px);
+        min-width: 100vw;
+        height: fit-content;
+        overflow: auto;
+        /* position: relative; */
+        display: flex; 
+        justify-content: center;
+    }
+}
+
+.isLogin {
+    .user-login-signup {
+        display: none;
+    }    
+}
+
+.unLogin {
+    .my-bill {
+        display: none;
+    }    
+}
+
+.modale.dialog-content{
+    background: rgba(0,0,0,0.4);
+    top:0px;
+    height: 100vh;
+    z-index: 100;
+        
+    .content{
+        background: rgba(0,0,0,0.4);
+        min-height: 100vh;
+    }
+    .col-6, .col-lg-6{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .content > *{
+        max-width: 500px;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid white;
+        height: fit-content;
+        margin: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .login-register{
+        .isDialog{
+            position: fixed;
+            left: calc(33% - 40px);
+        }
+        .Home{
+            height: 100vh;
+            background: url(/static/media/sfondo.d9981d68.png) center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-origin: border-box;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0; 
+            z-index: 20;
+            width: calc(100vw - 38%);
+            padding: 0px;
+            margin: 0px;
+        }
+    
+    }
+
+    .dialog-content{
+        .content{
+            
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .mobile-dialog{
+        .link{
+            display: none;
+        }
+    }
+}
+ 

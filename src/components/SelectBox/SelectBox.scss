@@ -1,0 +1,39 @@
+@import '../../theme.scss';
+
+.selectbox-component {
+    .input-container {
+        height: 45px;
+        width: 100%;
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        border: solid 1px #ccc;
+        padding: 10px 15px;
+        margin: 5px 0;
+        font-size: 15px;
+        font-family: Nunito;
+        color: #828282;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .drop-down-container{
+        width: 98%;
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        border: solid 1px #ccc;
+        position: absolute;
+        z-index: 5;
+        background-color: #FFF;
+
+        .item {
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $gray5;
+            }
+        }
+    }
+}

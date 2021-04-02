@@ -1,0 +1,139 @@
+@import '../../theme.scss';
+
+.delivery-component {    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    background-color: #FFF;
+    .delivery-container{
+        max-height: calc(100vh - 80px);
+        height: fit-content;
+
+        .delivery-takeaway{
+            h5{display:inline;}
+            .confirm{
+                max-width: 290px;
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                margin-top:50px;
+            }
+            .row{
+                border-top:1px dotted #ccc;
+                min-height: 112px;
+                min-width: 590px;
+            }
+            .col{ 
+                display: flex;
+            } 
+            
+            .col > *,.col-9 { 
+                margin:auto; 
+            } 
+            .cart-delivery-takeaway{
+                margin-top:50px;
+                display: inline;
+                .label{
+                    font-family: Nunito;
+                    font-style: normal;
+                    font-weight: 700;
+                    text-transform: none;
+                    font-size: 12px;
+                    line-height: 32px;
+                    color:#3C5896;
+                    letter-spacing: 0.2em;
+                    
+                }
+                input {font-size:12px; color:#3C5896;}
+                h5 {color:#3c5896;}
+                
+                .col .div-auto-margin{
+                    margin:auto 2px;
+                }
+                .col, .col-6{ 
+                    margin-top:20px;
+        
+                    margin-bottom:10px;
+                    display: inline;
+                } 
+                
+                .col > *,.col-9 { 
+                    margin:auto; 
+                } 
+            } 
+            h2{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 24px;
+                /* identical to box height, or 200% */
+        
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+        
+                /* Blu */
+        
+                color: #3C5896;
+            }
+            h5.title{
+                font-family: Nunito;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 24px;
+                /* identical to box height, or 160% */
+                text-transform: none;
+                display: flex;
+                align-items: center;
+                letter-spacing: normal;
+        
+                /* Blu */
+        
+                color: #3C5896;
+            }
+            h5{
+                letter-spacing: normal;
+                font-family: Nunito;
+                font-style: normal;
+                font-weight: normal;
+                text-transform: none;
+                font-size: 14px;
+                line-height: 24px;
+                /* identical to box height, or 171% */
+        
+                display: flex;
+                align-items: center;
+        
+                /* Gray 3 */
+        
+                color: #828282;
+            }
+        } 
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .delivery-component {
+        .delivery-container {
+            max-width: 50%;
+
+        } 
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .delivery-component {
+        .delivery-container {
+            
+        }
+    }
+}

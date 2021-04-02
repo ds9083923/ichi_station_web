@@ -1,0 +1,73 @@
+@import '../../../theme.scss';
+
+.quality-component {
+    display: flex;
+    flex-direction: column;    
+    background-color: #FFF;
+    
+    .quality-container {
+        position: relative;
+        
+        .main-row {
+            padding: 40px 0;
+            margin:0 auto;
+            max-width: 1250px;
+
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .description {
+                    color: $main-color;
+                    font-size: 12px;
+                    font-family: 'Open Sans';
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .border-container-left {
+            display: flex;
+            height: 50px;
+            position: absolute;
+            z-index: 2;
+            left: 33%;
+            top: 50%;
+            transform: translate(-25%, -50%);
+        }
+
+        .border-container-right {
+            display: flex;
+            height: 50px;
+            position: absolute;
+            z-index: 2;
+            right: 33%;
+            top: 50%;
+            transform: translate(-25%, -50%);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .quality-component {
+        .border-container-left, .border-container-right {
+            border-left: 0.5px solid $main-color !important;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .quality-component {
+        .main-row {
+            .item {
+                margin-top: 30px;
+            }
+        }
+
+        .border-container-left, .border-container-right {
+            border: none !important;
+        }
+    }
+}

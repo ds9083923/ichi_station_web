@@ -1,0 +1,110 @@
+@import '../../../theme.scss';
+
+.orders-component {
+    display: flex;
+    flex-direction: column;
+    .orders-container {
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+
+        .row {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Nunito;
+            color: $main-color;
+            font-style: normal;
+            margin-bottom: 20px;
+        }
+
+        .order-title {
+            font-size: 15px;
+            font-weight: bold;
+            font-family: Nunito;
+            color: $gray3;
+            margin-bottom: 0;
+        }
+
+        .view-btn {
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Nunito;
+            color: $main-color;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 15px;
+            font-family: Nunito;
+            color: $gray3;
+            margin-bottom: 3px;
+            margin-bottom: 0;
+        }
+
+        .main-row {
+            
+
+            .active-order-area {
+                padding-bottom: 70px;           
+            }
+
+            .active-order-area, .completed-order-area {
+                .item-area {
+                    padding: 20px 0;
+                    border-top: dotted 0.5px $gray4;
+
+                    .left-area, .right-area {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 25px;
+                    }
+
+                    &:last-child {
+                        border-bottom: dotted 0.5px $gray4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .orders-component {
+
+        .orders-container {
+            padding: 40px;
+
+            .main-row {
+                .left-area {
+                    border-right: solid 1px $gray4;
+                    padding-left: 0;
+                }
+    
+                .right-area {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .orders-component {
+        
+        .orders-container {
+            padding: 20px;
+
+            .main-row {
+                .left-area, .right-area {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

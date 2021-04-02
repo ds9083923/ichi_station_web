@@ -1,0 +1,182 @@
+@import '../../theme.scss';
+
+@keyframes sidebarShow {
+    0% {  transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+  
+@keyframes sidebarHide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.sidebar-component {    
+    .sidebar-wrapper {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        background: none;
+        height: 100vh;
+        font-size: 15px;
+        display: flex;
+        flex-direction: row-reverse;
+        pointer-events: none;
+
+        .sidebar-block {
+            flex: 1;
+            height: 100%;
+            width: 100%;
+            display: none;
+            pointer-events: auto;
+            background-color: rgba(32,54,98,.45);
+        }
+        .sidebar-content {
+            // width: 700px;
+            // margin-right: -700px;
+            height: 100%;
+            background: $main-color;
+            pointer-events: auto;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 50px;
+
+            .close-btn-area {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                // height: 70px;
+
+                img {
+                    height: 31px;
+                }
+    
+                .close-btn {
+                    cursor: pointer;
+                    // width: 18px;
+                    // height: 18px;
+                    // object-fit: fill;
+                }
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+
+                .main-menu {
+                    display: flex;
+                    flex-direction: column; 
+                }
+
+                .sub-menu {
+                    display: flex;
+                    flex-direction: column;                    
+                    padding: 70px 0;
+                }
+    
+                .menu-item {                    
+                    margin-bottom: 25px;
+                    color: #FFF;
+                    font-size: 32px;
+                    font-family: Nunito;
+                    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+    
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .sub-menu-item {
+                    margin-bottom: 25px;
+                    color: #FFF;
+                    font-size: 12px;
+                    font-weight: bold;
+                    font-family: 'Open Sans';
+                    letter-spacing: 3px;
+                    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+    
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                .facebook-icon, .instagram-icon {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar-component {    
+        .sidebar-wrapper {
+            .sidebar-content {
+                width: 700px;
+                margin-right: -700px;
+            }
+        }
+
+        &.active {
+            .sidebar-block {
+                display: block;
+            }
+            .sidebar-content {
+                margin-right: 0;
+                // animation: sidebarShow 0.2s ease-out;
+            }
+        }
+        
+        &.inactive {
+            .sidebar-block {
+                display: none;
+            }
+            .sidebar-content {
+                margin-right: -700px;
+                // animation: sidebarHide 0.2s ease-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar-component {    
+        .sidebar-wrapper {
+            .sidebar-content {
+                width: 100%;
+                margin-right: -100%;
+            }
+        }
+
+        &.active {
+            .sidebar-block {
+                display: block;
+            }
+            .sidebar-content {
+                margin-right: 0;
+                // animation: sidebarShow 0.2s ease-out;
+            }
+        }
+        
+        &.inactive {
+            .sidebar-block {
+                display: none;
+            }
+            .sidebar-content {
+                margin-right: -100%;
+                // animation: sidebarHide 0.2s ease-out;
+            }
+        }
+    }
+
+}
